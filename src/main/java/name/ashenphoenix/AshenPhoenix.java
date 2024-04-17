@@ -1,5 +1,6 @@
 package name.ashenphoenix;
 
+import name.ashenphoenix.Item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,7 @@ public class AshenPhoenix implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+
+		ModItems.registerModItems();
 	}
 }
