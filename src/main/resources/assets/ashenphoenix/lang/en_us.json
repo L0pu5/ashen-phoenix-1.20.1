@@ -1,3 +1,8 @@
 {
-  "item.ashenphoenix.sunfeather": "Sun Feather"
+  "item.ashenphoenix.sunfeather": "Sun Feather",
+  "item.ashenphoenix.sunfeathershard": "Sun Feather Shard",
+  "item.ashenphoenix.phoenixfeather": "Phoenix Feather",
+
+
+  "itemgroup.feathers": "Phoenix Feathers"
 }

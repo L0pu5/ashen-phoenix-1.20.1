@@ -1,5 +1,6 @@
 package name.ashenphoenix;
 
+import name.ashenphoenix.Item.ModItemGroups;
 import name.ashenphoenix.Item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +14,7 @@ public class AshenPhoenix implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 	}
 }
