@@ -18,10 +18,10 @@ public class sunfeather extends Item {
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        if(context.getWorld().isClient()) {
-            Stream<BlockPos> positions = BlockPos.stream(new Box(context.getBlockPos()).expand(5,0,5));
+        if(!context.getWorld().isClient()) {
+            Stream<BlockPos> positions = BlockPos.stream(new Box(context.getBlockPos()).expand(2,0,2));
             positions.forEach(pos -> ((ServerWorld) context.getWorld())
-                    .spawnParticles(ParticleTypes.FLAME, pos.getX() + 0.5d, pos.getY(), pos.getZ() + 0.5d, 2, 0, 0, 0, 0 ));
+                    .spawnParticles(ParticleTypes.FLAME, pos.getX() + 0.25d, pos.getY() + 0.25d, pos.getZ() + 0.25d, 2, 0, 0, 0, 0 ));
         }
 
         return super.useOnBlock(context);
